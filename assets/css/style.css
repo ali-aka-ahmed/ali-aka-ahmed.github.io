@@ -3,6 +3,10 @@ body {
   	padding: 0px;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -19,8 +23,7 @@ Everything in class="screen" id="main"
 }
 
 .homepage {
-/*	position: fixed;
-*/	color: white;
+	color: white;
 	background: black;
 	width: 100vw;
 	height: 100vh;
@@ -34,7 +37,7 @@ Everything in class="screen" id="main"
 	width: 100vw;
 	height: 100vh;
 	color: black;
-
+	/*margin-top: 100vh;*/
 }
 
 .amword {
@@ -197,20 +200,26 @@ Everything in class="screen" id="res"
 }
 
 
-/*#home {
-	display: inline-block;
-	font-family: 'Montserrat', sans-serif;
-	transition: 500ms;
-	position: fixed;
-	font-size: 160%;
-	text-align: center;
-	right: 1.2%;
-	color: black;
+.home {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 160%;
+    text-align: right;
+    right: 1.2%;
+    color: white;
+    transition: all 1s;
+    height: 8vh;
 }
 
-#home:hover {
+.home:hover {
 	font-size: 190%;
 	transition: 500ms;
+}
+
+/*.home-active {
+	opacity: 1;
+	display: inline-block;
+	transition: all 1s;
+	z-index: 2;
 }*/
 
 .section {
@@ -463,7 +472,7 @@ ul {
 
 #contact {
 	background-color: black;
-	height: 75vh;
+	height: 100vh;
 }
 
 #icon {

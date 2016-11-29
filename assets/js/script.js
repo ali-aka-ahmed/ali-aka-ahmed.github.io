@@ -9,6 +9,12 @@ $(document).ready(function() {
         $('.main').addClass('main-active');
     });
 
+    $(".home").click(function() {
+        $('.res').removeClass('res-active');
+        $('.main').removeClass('main-active');
+        window.scrollTo(0, 0);
+    });
+
     
 
     // var HomeButtonPosition = $("#home").offset().top;
