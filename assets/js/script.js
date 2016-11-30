@@ -21,7 +21,7 @@ $(document).ready(function() {
         }, 2000);
     });
 
-    $(".t3").on("mouseenter", function(){
+    $(".t3").hover(function(){
         $(".t3").css("text-decoration", "line-through");
         $('.t3').css("font-size", "x-large");
         $('.t3').css("width", "8vw");
@@ -37,8 +37,10 @@ $(document).ready(function() {
             $('.t3').css("opacity", "0");
         }, 1500);
         setTimeout(function() {
-            $('.t3').css("display", "none");
+            $('.t3').hide();
         }, 2500);
+    }, function() {
+
     });
 
     // var HomeButtonPosition = $("#home").offset().top;
