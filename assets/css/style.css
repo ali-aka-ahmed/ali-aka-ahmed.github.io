@@ -80,11 +80,22 @@ Everything in class="screen" id="main"
 	margin-bottom: 0vh;
 }
 
-.homepage #t3 {
+.homepage .t3 {
 	height: 10vh;
-	padding-top: 0px;
-	margin-left: 30vh;
-	margin-bottom: 0vh;
+    padding-top: 0px;
+    margin-left: 30vh;
+    margin-bottom: 0vh;
+    width: 31vw;
+    display: inline-block;
+    transition: all 1s;
+}
+
+.homepage .t4 {
+	transition: all 1s;
+}
+
+.claire {
+	transition: all 1s;
 }
 
 .button {
@@ -221,6 +232,41 @@ Everything in class="screen" id="res"
 	transition: all 1s;
 	z-index: 2;
 }*/
+
+.totop {
+    width: 5vw;
+    height: 10vh;
+    margin-left: 90%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 3vh;
+    transition: 2s;
+}
+
+.toparrow {
+	font-size: 160%;
+    text-align: center;
+    top: 88%;
+    width: 4vw;
+}
+
+.topword {
+	font-size: 160%;
+    text-align: center;
+    width: 6vw;
+    padding-right: 2vw;
+}
+
+.totop:hover .topword {
+	font-size: 190%;
+	transition: 500ms;
+}
+
+.totop:hover .toparrow {
+	font-size: 190%;
+	transition: 500ms;
+}
+
 
 .section {
 	padding-top: 40px;

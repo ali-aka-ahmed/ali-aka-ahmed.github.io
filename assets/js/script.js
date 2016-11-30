@@ -15,7 +15,18 @@ $(document).ready(function() {
         window.scrollTo(0, 0);
     });
 
-    
+    $('.totop').click(function(){
+        $('body').animate({
+            scrollTop: 0
+        }, 2000);
+    });
+
+    $(".claire").hover(function(){
+        $(".t3").css("text-decoration", "line-through");
+        $('.t3').css("font-size", "x-large");
+        $('.t3').css("width", "8vw");
+            }, function(){
+    });
 
     // var HomeButtonPosition = $("#home").offset().top;
 
