@@ -18,6 +18,9 @@ Everything in class="screen" id="main"
 
 .main {
 	top: 0;
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-o-transition: all 1.5s;
 	transition: all 1.5s;
 	opacity: 1;
 }
@@ -87,15 +90,24 @@ Everything in class="screen" id="main"
     margin-bottom: 0vh;
     width: 31vw;
     display: inline-block;
+    -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
     transition: all 1s;
 }
 
 .homepage .t4 {
-	transition: all 1s;
+    -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+    transition: all 1s;
 }
 
 .claire {
-	transition: all 1s;
+    -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+    transition: all 1s;
 }
 
 /*.disable {
@@ -106,6 +118,9 @@ Everything in class="screen" id="main"
 	display: inline-block;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 160%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 	position: absolute;
     top: 50%;
@@ -119,6 +134,9 @@ Everything in class="screen" id="main"
 
 #resume:hover {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
@@ -131,6 +149,9 @@ Everything in class="screen" id="main"
 
 #blog:hover {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
@@ -159,11 +180,17 @@ Everything in class="screen" id="main"
 
 #aboutme_container:hover #arrow {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
 #aboutme_container:hover #aboutme {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
@@ -180,37 +207,31 @@ Everything in class="screen" id="res"
 	top: 0;
 	left: 0;
   	min-height: 100%;
-	/*overflow: scroll;*/
-	/*-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-o-transform: translateX(-50%);*/
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
 	transform: translateX(-100%);
-	/*-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;*/
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-o-transition: all 1.5s;
 	transition: all 1.5s;
 	z-index: 1;
 }
 
 .res-active {
-	/*-webkit-transform: translateX(0px);
+	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
-	-o-transform: translateX(0px);*/
+	-o-transform: translateX(0px);
 	transform: translateX(0);
 	background-color:rgba(255, 255, 255, 1);
-/*	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;*/
+
 }
 
 .main-active {
-/*	-webkit-transform: translateX(100%);
-	-moz-transform: translateX(100%);
-	-o-transform: translateX(100%);*/
 	opacity: 0;
-	/*-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;*/
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
 
@@ -221,12 +242,18 @@ Everything in class="screen" id="res"
     text-align: right;
     right: 1.2%;
     color: white;
+    -webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
     transition: all 1s;
     height: 8vh;
 }
 
 .home:hover {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
@@ -244,7 +271,10 @@ Everything in class="screen" id="res"
     color: white;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 3vh;
-    transition: 2s;
+    -webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	-o-transition: all 2s;
+    transition: all 2s;
 }
 
 .toparrow {
@@ -263,11 +293,17 @@ Everything in class="screen" id="res"
 
 .totop:hover .topword {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
 .totop:hover .toparrow {
 	font-size: 190%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 }
 
@@ -465,6 +501,9 @@ ul {
 	float: right;
 	color: teal;
 	font-size: 120%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 	margin-top: 0px;
 }
@@ -473,6 +512,9 @@ ul {
 	float: right;
 	color: #D3D3D3;
 	font-size: 120%;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	-o-transition: 500ms;
 	transition: 500ms;
 	margin-top: 0px;
 }
@@ -491,12 +533,18 @@ ul {
     float: right;
     color: teal;
     margin-right: 3%;
+    -webkit-transition: 0.3ms;
+	-moz-transition: 0.3ms;
+	-o-transition: 0.3s;
     transition: 0.3s;
 }
 
 .skill:hover #hidden {
 	opacity: 1;
-	transition: 0.3s;
+    -webkit-transition: 0.3ms;
+	-moz-transition: 0.3ms;
+	-o-transition: 0.3s;
+    transition: 0.3s;
 }
 
 /*Everything in class="screen" id="project"*/
