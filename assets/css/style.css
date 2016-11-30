@@ -69,21 +69,21 @@ Everything in class="screen" id="main"
 .homepage #t1 {
 	padding-top: 28vh;
 	height: 38vh;
-	margin-left: 30vh;
+	margin-left: 15.5vw;
 	margin-bottom: 0vh;
 }
 
 .homepage #t2 {
 	height: 10vh;
 	padding-top: 0px;
-	margin-left: 30vh;
+	margin-left: 15.5vw;
 	margin-bottom: 0vh;
 }
 
 .homepage .t3 {
 	height: 10vh;
     padding-top: 0px;
-    margin-left: 30vh;
+    margin-left: 15.5vw;
     margin-bottom: 0vh;
     width: 31vw;
     display: inline-block;
@@ -97,6 +97,10 @@ Everything in class="screen" id="main"
 .claire {
 	transition: all 1s;
 }
+
+/*.disable {
+	z-index: -1;
+}*/
 
 .button {
 	display: inline-block;

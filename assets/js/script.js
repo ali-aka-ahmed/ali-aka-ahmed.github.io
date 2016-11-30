@@ -21,11 +21,24 @@ $(document).ready(function() {
         }, 2000);
     });
 
-    $(".claire").hover(function(){
+    $(".t3").on("mouseenter", function(){
         $(".t3").css("text-decoration", "line-through");
         $('.t3').css("font-size", "x-large");
         $('.t3').css("width", "8vw");
-            }, function(){
+        setTimeout(function() {
+            $('.t3').css("transition", "0.5s");
+            $('.t3').css("width", "10vw");
+        }, 1000);
+        setTimeout(function() {
+            $('.t3').css("transition", "1s");
+            $('.t3').css("width", "0vw");
+            $('.t3').css("margin-left", "-1.4vw");
+            $('.t4').css("margin-left", "15.5vw");
+            $('.t3').css("opacity", "0");
+        }, 1500);
+        setTimeout(function() {
+            $('.t3').css("display", "none");
+        }, 2500);
     });
 
     // var HomeButtonPosition = $("#home").offset().top;
