@@ -21,39 +21,34 @@ $(document).ready(function() {
         }, 2000);
     });
 
-    $(".t3").hover(function(){
+    var bool = false;
+
+    $('.t3').one("mouseenter", function() {
         $(".t3").css("text-decoration", "line-through");
         $('.t3').css("font-size", "x-large");
-        $('.t3').css("width", "8vw");
-        setTimeout(function() {
-            $('.t3').css("transition", "0.5s");
-            $('.t3').css("width", "10vw");
-        }, 1000);
         setTimeout(function() {
             $('.t3').css("transition", "1s");
-            $('.t3').css("width", "0vw");
-            $('.t3').css("margin-left", "-1.4vw");
+            $('.t3').css("margin-right", "30px");
+        }, 1100);
+        setTimeout(function() {
+            $('.t3').css("margin-right", "0px");
+            $('.t3').css("margin-left", "-134px");
             $('.t4').css("margin-left", "15.5vw");
-            $('.t3').css("opacity", "0");
-        }, 1500);
+        }, 2170);
         setTimeout(function() {
             $('.t3').hide();
-        }, 2500);
-    }, function() {
+            bool = true;
+        }, 3170);
 
     });
 
-    // var HomeButtonPosition = $("#home").offset().top;
-
-    // $(window).scroll(function() {
-    //   var scrollHeight = $(window).scrollTop();
-      
-    //   if (scrollHeight > HomeButtonPosition * 0.5) {
-    //     $(".search-container").addClass("search-bar-fixed");
-    //   } else {
-    //     $(".search-container").removeClass("search-bar-fixed");
-    //   }
-    // });
+    $(".t4").hover(function() {
+        if (bool) {
+            $(".hiddenn").css("opacity", "1");
+        }
+    }, function(){
+            $(".hiddenn").css("opacity", "0");
+    });
 
 });
 
