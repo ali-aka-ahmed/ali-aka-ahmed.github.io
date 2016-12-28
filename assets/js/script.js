@@ -4,24 +4,87 @@ $(document).ready(function() {
     //     $ use slide up
     // })
 
+    var boolRes = false;
+    var ready = true;
+
     $("#resume").click(function() {
-        $('.res').addClass('res-active');
-        $('.main').addClass('main-active');
+        if (ready) {
+            $('.res').addClass('res-active-display');
+            $('.menu').addClass('res-active-display');
+            setTimeout(function() {
+                $('.res').addClass('res-active');
+                $('.main').addClass('main-active');
+                $('.menu').addClass('res-active');
+            }, 2);
+            boolRes = true;
+        }
     });
 
     $(".home").click(function() {
+        ready = false
+        disable_scroll();
         $('.res').removeClass('res-active');
         $('.main').removeClass('main-active');
-        window.scrollTo(0, 0);
+        $('.menu').removeClass('res-active');
+        setTimeout(function() {
+            $('.res').removeClass('res-active-display');
+            $('.menu').removeClass('res-active-display');
+            enable_scroll();
+            ready = true;
+            window.scrollTo(0, 0);
+        }, 1502);
+        boolRes = false;
     });
+
+    // left: 37, up: 38, right: 39, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    var keys = [37, 38, 39, 40];
+
+    function preventDefault(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+          e.preventDefault();
+      e.returnValue = false;  
+    }
+
+    function keydown(e) {
+        for (var i = keys.length; i--;) {
+            if (e.keyCode === keys[i]) {
+                preventDefault(e);
+                return;
+            }
+        }
+    }
+
+    function wheel(e) {
+      preventDefault(e);
+    }
+
+    function disable_scroll() {
+      if (window.addEventListener) {
+          window.addEventListener('DOMMouseScroll', wheel, false);
+      }
+      window.onmousewheel = document.onmousewheel = wheel;
+      document.onkeydown = keydown;
+    }
+
+    function enable_scroll() {
+        if (window.removeEventListener) {
+            window.removeEventListener('DOMMouseScroll', wheel, false);
+        }
+        window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
+    }
 
     $('.totop').click(function(){
+        var scrolldist = $(window).scrollTop();
+        var windowsize = $(window).height();
+        var timeup = (scrolldist * 400 / windowsize);
         $('body').animate({
             scrollTop: 0
-        }, 2000);
+        }, timeup);
     });
 
-    var bool = false;
+    var boolHome = false;
 
     $('.t3').one("mouseenter", function() {
         $(".t3").css("text-decoration", "line-through");
@@ -37,20 +100,56 @@ $(document).ready(function() {
         }, 2170);
         setTimeout(function() {
             $('.t3').hide();
-            bool = true;
+            boolHome = true;
         }, 3170);
 
     });
 
     $(".t4").hover(function() {
-        if (bool) {
+        if (boolHome) {
             $(".hiddenn").css("opacity", "1");
         }
     }, function(){
             $(".hiddenn").css("opacity", "0");
     });
 
+    /* 
+    Animates the sidebar in the resume. 
+    1) Makes it visible when scrolling to the first section ('Profile')
+    2) Changes its color when it reaches the last section ('Contacts')
+    - Note also use the scrollTop and ContactOffset distance in calculating transition time for menu element .totop 
+    */
+
+    $(window).scroll(function() {
+        var scrolltop     = $(window).scrollTop(), // also used in transition time for menu element .totop
+            ProfileOffset = $('#menu-ind').offset().top / 1.2,
+            ContactOffset = $('#color-ind').offset().top, // also used in transition time for menu element .totop
+            distProfile   = (ProfileOffset - scrolltop),
+            distContact   = (ContactOffset - scrolltop);
+
+        if (distProfile <= 0 && boolRes) {
+            $(".menu").addClass("menu-visible");
+        } else {
+            $(".menu").removeClass("menu-visible");
+        }
+
+        if (distContact <= 0 && boolRes) {
+            $(".menu").addClass("menu-transition");
+            $(".menu").addClass("menu-white");
+        } else {
+            $(".menu").removeClass("menu-white");
+            setTimeout(function() {
+                $(".menu").removeClass("menu-transition");
+            }, 30);
+        }
+    });
+
+
+
+    
 });
+
+
 
 
 
