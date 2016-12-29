@@ -39,6 +39,10 @@ Everything in class="screen" id="main"
 	margin-top: 100vh;
 }
 
+.about-me-inactive {
+	display: none;
+}
+
 #amsec1 {
 	background-color: white;
 	padding-top: 20vh;

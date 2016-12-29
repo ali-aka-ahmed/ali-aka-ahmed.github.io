@@ -16,6 +16,9 @@ $(document).ready(function() {
                 $('.main').addClass('main-active');
                 $('.menu').addClass('res-active');
             }, 2);
+            setTimeout(function() {
+                $('.about-me').addClass('about-me-inactive');
+            }, 3);
             boolRes = true;
         }
     });
@@ -29,10 +32,13 @@ $(document).ready(function() {
         setTimeout(function() {
             $('.res').removeClass('res-active-display');
             $('.menu').removeClass('res-active-display');
-            enable_scroll();
-            ready = true;
             window.scrollTo(0, 0);
         }, 1502);
+        setTimeout(function() {
+            $('.about-me').removeClass('about-me-inactive');
+            enable_scroll();
+            ready = true;
+        }, 1503);
         boolRes = false;
     });
 
