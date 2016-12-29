@@ -33,12 +33,12 @@ $(document).ready(function() {
             $('.res').removeClass('res-active-display');
             $('.menu').removeClass('res-active-display');
             window.scrollTo(0, 0);
-        }, 1502);
+        }, 702);
         setTimeout(function() {
             $('.about-me').removeClass('about-me-inactive');
             enable_scroll();
             ready = true;
-        }, 1503);
+        }, 703);
         boolRes = false;
     });
 

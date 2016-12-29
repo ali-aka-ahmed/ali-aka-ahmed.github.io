@@ -146,13 +146,13 @@ Everything in class="screen" id="main"
 }
 
 #resume {
-	font-size: 160%;
+	font-size: 120%;
 	left: 1.2%;
 	text-align: center;
 }
 
 #resume:hover {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
@@ -161,13 +161,13 @@ Everything in class="screen" id="main"
 
 
 #blog {
-	font-size: 160%;
+	font-size: 120%;
 	text-align: center;
 	right: 1.2%;
 }
 
 #blog:hover {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
@@ -182,7 +182,7 @@ Everything in class="screen" id="main"
 }
 
 #aboutme {
-	font-size: 160%;
+	font-size: 120%;
     text-align: center;
     top: 88%;
     width: 13vw;
@@ -190,7 +190,7 @@ Everything in class="screen" id="main"
 }
 
 #arrow {
-	font-size: 160%;
+	font-size: 120%;
 	text-align: center;
 	top: 92%;
 	left: 49.3%;
@@ -198,7 +198,7 @@ Everything in class="screen" id="main"
 }
 
 #aboutme_container:hover #arrow {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
@@ -206,7 +206,7 @@ Everything in class="screen" id="main"
 }
 
 #aboutme_container:hover #aboutme {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
@@ -259,28 +259,22 @@ Everything in class="screen" id="res"
 
 .home {
     font-family: 'Montserrat', sans-serif;
-    font-size: 160%;
+    font-size: 120%;
     -webkit-transition: all 1s;
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
     transition: all 1s;
     height: 8vh;
+    margin-left: 1%;
 }
 
 .home:hover {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
 	transition: 500ms;
 }
-
-/*.home-active {
-	opacity: 1;
-	display: inline-block;
-	transition: all 1s;
-	z-index: 2;
-}*/
 
 .menu {
     position: fixed;
@@ -319,21 +313,21 @@ Everything in class="screen" id="res"
 }
 
 .toparrow {
-	font-size: 160%;
+	font-size: 120%;
     text-align: center;
     top: 88%;
     width: 4vw;
 }
 
 .topword {
-	font-size: 160%;
+	font-size: 120%;
     text-align: center;
     width: 6vw;
     padding-right: 2vw;
 }
 
 .totop:hover .topword {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
@@ -341,7 +335,7 @@ Everything in class="screen" id="res"
 }
 
 .totop:hover .toparrow {
-	font-size: 190%;
+	font-size: 150%;
 	-webkit-transition: 500ms;
 	-moz-transition: 500ms;
 	-o-transition: 500ms;
