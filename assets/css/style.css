@@ -655,6 +655,7 @@ ul {
 
 .download-button a:link {
 	text-decoration: none;
+	color: white;
 }
 
 .download-button a:visited {
