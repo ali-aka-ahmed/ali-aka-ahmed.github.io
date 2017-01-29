@@ -1,46 +1,108 @@
 $(document).ready(function() {  
 
-    // $('#amsec1').scroll(function() {
-    //     $ use slide up
-    // })
+    /* BUTTON JQUERY 
 
-    var boolRes = false;
+    1) Landing Page Buttons
+        - resume
+        - blog
+        - about me
+    2) Resume Menu Buttons
+        - top
+        - home
+    3) Blog Menu Buttons
+        - top
+        - home
+
+    */
+
+
+
+    // Landing Page Buttons
+
+
+
+    var resActive = false;
     var ready = true;
+    var blogActive = false;
 
     $("#resume").click(function() {
         if (ready) {
+            ready = false;
             $('.res').addClass('res-active-display');
-            $('.menu').addClass('res-active-display');
+            $('.resmenu').addClass('res-active-display');
             setTimeout(function() {
                 $('.res').addClass('res-active');
                 $('.main').addClass('main-active');
-                $('.menu').addClass('res-active');
+                $('.resmenu').addClass('res-active');
             }, 2);
             setTimeout(function() {
                 $('.about-me').addClass('about-me-inactive');
+                ready = true;
             }, 3);
-            boolRes = true;
+            resActive = true;
         }
     });
 
+    $("#blog").click(function() {
+        if (ready) {
+            ready = false;
+            $('.blog').addClass('blog-active-display');
+            $('.blogmenu').addClass('blogmenu-active-display');
+            setTimeout(function() {
+                $('.blog').addClass('blog-active');
+                $('.main').addClass('main-active');
+                $('.blogmenu').addClass('blog-active');
+            }, 2);
+            setTimeout(function() {
+                $('.about-me').addClass('about-me-inactive');
+                ready = true;
+            }, 3);
+            blogActive = true;
+        }
+    });
+
+    $('#aboutme_container').click(function(){
+        var amsec1offset = $('#amsec1').offset().top;
+        $('body').animate({
+            scrollTop: amsec1offset
+        }, 1000);
+    });
+
+
+
+    // Resume Menu Buttons
+
+
+
+    $('.totop').click(function(){
+        var scrolldist = $(window).scrollTop();
+        var windowsize = $(window).height();
+        var timeup = (scrolldist * 400 / windowsize);
+        $('body').animate({
+            scrollTop: 0
+        }, timeup);
+    });
+
     $(".home").click(function() {
-        ready = false
+        ready = false;
         disable_scroll();
         $('.res').removeClass('res-active');
         $('.main').removeClass('main-active');
-        $('.menu').removeClass('res-active');
+        $('.resmenu').removeClass('res-active');
         setTimeout(function() {
             $('.res').removeClass('res-active-display');
-            $('.menu').removeClass('res-active-display');
+            $('.resmenu').removeClass('res-active-display');
             window.scrollTo(0, 0);
-        }, 702);
+        }, 1502);
         setTimeout(function() {
             $('.about-me').removeClass('about-me-inactive');
             enable_scroll();
             ready = true;
-        }, 703);
-        boolRes = false;
+        }, 1503);
+        resActive = false;
     });
+
+    // Helper Functions for disable_scroll and enable_scroll functions used for home transition
 
     // left: 37, up: 38, right: 39, down: 40,
     // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
@@ -81,6 +143,12 @@ $(document).ready(function() {
         window.onmousewheel = document.onmousewheel = document.onkeydown = null;  
     }
 
+
+
+    // Blog Menu Buttons
+
+
+
     $('.totop').click(function(){
         var scrolldist = $(window).scrollTop();
         var windowsize = $(window).height();
@@ -90,7 +158,31 @@ $(document).ready(function() {
         }, timeup);
     });
 
-    var boolHome = false;
+    $(".home").click(function() {
+        ready = false
+        disable_scroll();
+        $('.blog').removeClass('blog-active');
+        $('.main').removeClass('main-active');
+        $('.blogmenu').removeClass('blog-active');
+        setTimeout(function() {
+            $('.blog').removeClass('blog-active-display');
+            $('.blogmenu').removeClass('blogmenu-active-display');
+            window.scrollTo(0, 0);
+        }, 1502);
+        setTimeout(function() {
+            $('.about-me').removeClass('about-me-inactive');
+            enable_scroll();
+            ready = true;
+        }, 1503);
+        blogActive = false;
+    });
+
+
+
+
+
+
+    var claireeffect = false;
 
     $('.t3').one("mouseenter", function() {
         $(".t3").css("text-decoration", "line-through");
@@ -106,13 +198,13 @@ $(document).ready(function() {
         }, 2170);
         setTimeout(function() {
             $('.t3').hide();
-            boolHome = true;
+            claireeffect = true;
         }, 3170);
 
     });
 
     $(".t4").hover(function() {
-        if (boolHome) {
+        if (claireeffect) {
             $(".hiddenn").css("opacity", "1");
         }
     }, function(){
@@ -123,35 +215,32 @@ $(document).ready(function() {
     Animates the sidebar in the resume. 
     1) Makes it visible when scrolling to the first section ('Profile')
     2) Changes its color when it reaches the last section ('Contacts')
-    - Note also use the scrollTop and ContactOffset distance in calculating transition time for menu element .totop 
     */
 
     $(window).scroll(function() {
-        var scrolltop     = $(window).scrollTop(), // also used in transition time for menu element .totop
+        var scrolltop     = $(window).scrollTop(),
             ProfileOffset = $('#menu-ind').offset().top / 1.2,
-            ContactOffset = $('#color-ind').offset().top, // also used in transition time for menu element .totop
+            ContactOffset = $('#color-ind').offset().top,
             distProfile   = (ProfileOffset - scrolltop),
             distContact   = (ContactOffset - scrolltop);
 
-        if (distProfile <= 0 && boolRes) {
-            $(".menu").addClass("menu-visible");
+        if (distProfile <= 0 && resActive) {
+            $(".resmenu").addClass("menu-visible");
         } else {
-            $(".menu").removeClass("menu-visible");
+
+            $(".resmenu").removeClass("menu-visible");
         }
 
-        if (distContact <= 0 && boolRes) {
-            $(".menu").addClass("menu-transition");
-            $(".menu").addClass("menu-white");
+        if (distContact <= 0 && resActive) {
+            $(".resmenu").addClass("menu-transition");
+            $(".resmenu").addClass("menu-white");
         } else {
-            $(".menu").removeClass("menu-white");
+            $(".resmenu").removeClass("menu-white");
             setTimeout(function() {
-                $(".menu").removeClass("menu-transition");
+                $(".resmenu").removeClass("menu-transition");
             }, 30);
         }
     });
-
-
-
     
 });
 
