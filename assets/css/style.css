@@ -15,7 +15,6 @@ body {
 LANDING PAGE
 Everything in class="screen" id="main"
 */
-
 .main {
 	top: 0;
 	-webkit-transition: all 1.5s;
@@ -28,8 +27,8 @@ Everything in class="screen" id="main"
 .homepage {
 	color: white;
 	background: black;
-/*	background-image: url("../img/landingpage.png");
-*/	width: 100vw;
+	/*background-image: url('../img/covermask.png');*/
+	width: 100vw;
 	height: 100vh;
 	top: 0;
 	position: fixed;
@@ -113,6 +112,7 @@ Everything in class="screen" id="main"
 	transition: 500ms;
 	position: absolute;
     top: 50%;
+    color: white;
 }
 
 #resume {
@@ -416,8 +416,8 @@ Everything in class="screen" id="res"
     left: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
-}
+/*    height: 100vh;
+*/}
 
 #resheader {
 	padding-bottom: 2%;
@@ -513,6 +513,16 @@ hr {
 
 /*Everything in class="section" id="education"*/
 
+#edudescrip {
+	text-align: left;
+    padding-left: 25%;
+    margin-top: 10px;
+}
+
+.under {
+	background: white;
+}
+
 #coldescrip {
 	display: inline-block;
 }
@@ -533,6 +543,7 @@ hr {
 .relcoursesub {
 	font-family: 'Montserrat';
 	margin-top: 3%;
+	text-align: left;
 }
 
 .relcoursetitle {

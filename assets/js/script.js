@@ -182,34 +182,34 @@ $(document).ready(function() {
 
 
 
-    var claireeffect = false;
+    // var claireeffect = false;
 
-    $('.t3').one("mouseenter", function() {
-        $(".t3").css("text-decoration", "line-through");
-        $('.t3').css("font-size", "x-large");
-        setTimeout(function() {
-            $('.t3').css("transition", "1s");
-            $('.t3').css("margin-right", "30px");
-        }, 1100);
-        setTimeout(function() {
-            $('.t3').css("margin-right", "0px");
-            $('.t3').css("margin-left", "-134px");
-            $('.t4').css("margin-left", "15.5vw");
-        }, 2170);
-        setTimeout(function() {
-            $('.t3').hide();
-            claireeffect = true;
-        }, 3170);
+    // $('.t3').one("mouseenter", function() {
+    //     $(".t3").css("text-decoration", "line-through");
+    //     $('.t3').css("font-size", "x-large");
+    //     setTimeout(function() {
+    //         $('.t3').css("transition", "1s");
+    //         $('.t3').css("margin-right", "30px");
+    //     }, 1100);
+    //     setTimeout(function() {
+    //         $('.t3').css("margin-right", "0px");
+    //         $('.t3').css("margin-left", "-134px");
+    //         $('.t4').css("margin-left", "15.5vw");
+    //     }, 2170);
+    //     setTimeout(function() {
+    //         $('.t3').hide();
+    //         claireeffect = true;
+    //     }, 3170);
 
-    });
+    // });
 
-    $(".t4").hover(function() {
-        if (claireeffect) {
-            $(".hiddenn").css("opacity", "1");
-        }
-    }, function(){
-            $(".hiddenn").css("opacity", "0");
-    });
+    // $(".t4").hover(function() {
+    //     if (claireeffect) {
+    //         $(".hiddenn").css("opacity", "1");
+    //     }
+    // }, function(){
+    //         $(".hiddenn").css("opacity", "0");
+    // });
 
     /* 
     Animates the sidebar in the resume. 
