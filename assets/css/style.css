@@ -416,8 +416,8 @@ Everything in class="screen" id="res"
     left: 0;
     right: 0;
     width: 100vw;
-/*    height: 100vh;
-*/}
+    min-height: 100vh;
+}
 
 #resheader {
 	padding-bottom: 2%;
