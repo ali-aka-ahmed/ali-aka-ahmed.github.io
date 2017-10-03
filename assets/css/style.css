@@ -126,7 +126,7 @@ Everything in class="screen" id="main"
 
 #resume {
 	font-size: 120%;
-	left: 1.2%;
+	left: 10px;
 	text-align: center;
 }
 
@@ -142,7 +142,7 @@ Everything in class="screen" id="main"
 #blog {
 	font-size: 120%;
 	text-align: center;
-	right: 1.2%;
+	right: 10px;
 }
 
 #blog:hover {
