@@ -17,11 +17,11 @@
     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
     * using 'navigator.sendBeacon' in browser that support it.
     */
-    function handleOutboundLinkClicks(event) {
+    function handleOutboundLinkClicks(label) {
       ga('send', 'event', {
         eventCategory: 'Outbound Link',
         eventAction: 'click',
-        eventLabel: event.target.href,
+        eventLabel: label,
         transport: 'beacon'
       });
     }
@@ -55,11 +55,11 @@
 
                     <br><br> I also love jazz, watching documentaries, reading the Economist Magazine, and obsessing over Game of Thrones.</p>
                     <ul class="h-ul w-list-unstyled">
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://www.linkedin.com/in/ali-ahmed-56b010ba" target="_blank" onclick="handleOutboundLinkClicks(this);"><div class="h-link-text">LinkedIn</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://github.com/ali-wetrill" target="_blank" onclick="handleOutboundLinkClicks(this);"><div class="h-link-text">Github</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://medium.com/@ali_wetrill" target="_blank" onclick="handleOutboundLinkClicks(this);"><div class="h-link-text">Medium</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="mailto:ali.ahmed@berkeley.edu" target="_blank" onclick="handleOutboundLinkClicks(this);"><div class="h-link-text">Email</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="./assets/ResumeShortTech.pdf" target="_blank" onclick="handleOutboundLinkClicks(this);"><div class="h-link-text">Technical Resume</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://www.linkedin.com/in/ali-ahmed-56b010ba" target="_blank" onclick="handleOutboundLinkClicks('LinkedIn');"><div class="h-link-text">LinkedIn</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://github.com/ali-wetrill" target="_blank" onclick="handleOutboundLinkClicks('Github');"><div class="h-link-text">Github</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://medium.com/@ali_wetrill" target="_blank" onclick="handleOutboundLinkClicks('Medium');"><div class="h-link-text">Medium</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="mailto:ali.ahmed@berkeley.edu" target="_blank" onclick="handleOutboundLinkClicks('Email');"><div class="h-link-text">Email</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="./assets/ResumeShortTech.pdf" target="_blank" onclick="handleOutboundLinkClicks('Resume');"><div class="h-link-text">Technical Resume</div></a></li>
                     </ul>
                 </div>
             </div>
