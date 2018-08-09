@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html data-wf-domain="aliahmed.io" data-wf-page="5819607bc5fddf0f70ab38e6" data-wf-site="57cfb23b904ea6421ee1b8ea">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123749695-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123749695-1');
+    </script>
+    <script>
+    /**
+    * Function that tracks a click on an outbound link in Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    var trackOutboundLink = function(url) {
+       ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function(){document.location = url;}
+       });
+    }
+    </script>
     <meta charset="utf-8">
     <title>Ali Ahmed</title>
     <meta content="Hi! I'm Ali Ahmed, a student at the University of California, Berkeley studying Computer Science and Economics" name="description">
@@ -30,11 +53,11 @@
 
                     <br><br> I also love jazz, watching documentaries, reading the Economist Magazine, and obsessing over Game of Thrones.</p>
                     <ul class="h-ul w-list-unstyled">
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://www.linkedin.com/in/ali-ahmed-56b010ba" target="_blank"><div class="h-link-text">LinkedIn</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://github.com/ali-wetrill" target="_blank"><div class="h-link-text">Github</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="https://medium.com/@ali_wetrill" target="_blank"><div class="h-link-text">Medium</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="mailto:ali.ahmed@berkeley.edu" target="_blank"><div class="h-link-text">Email</div></a></li>
-                        <li class="h-li"><a class="link-box w-inline-block" href="assets/ResumeShortTech.pdf" target="_blank"><div class="h-link-text">Technical Resume</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://www.linkedin.com/in/ali-ahmed-56b010ba" onclick="trackOutboundLink('https://www.linkedin.com/in/ali-ahmed-56b010ba'); return false;" target="_blank"><div class="h-link-text">LinkedIn</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://github.com/ali-wetrill" onclick="trackOutboundLink('https://github.com/ali-wetrill'); return false;" target="_blank"><div class="h-link-text">Github</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="https://medium.com/@ali_wetrill" onclick="trackOutboundLink('https://medium.com/@ali_wetrill'); return false;" target="_blank"><div class="h-link-text">Medium</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="mailto:ali.ahmed@berkeley.edu" onclick="trackOutboundLink('mailto:ali.ahmed@berkeley.edum'); return false;" target="_blank"><div class="h-link-text">Email</div></a></li>
+                        <li class="h-li"><a class="link-box w-inline-block" href="./assets/ResumeShortTech.pdf" onclick="trackOutboundLink('./assets/ResumeShortTech.pdf'); return false;" target="_blank"><div class="h-link-text">Technical Resume</div></a></li>
                     </ul>
                 </div>
             </div>
