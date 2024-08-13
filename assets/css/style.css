@@ -1,8 +1,8 @@
 body {
 	margin: 0px;
-  	padding: 0px;
-  width: 100vw;
-  height: 100vh;
+	padding: 0px;
+	width: 100vw;
+	height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -41,10 +41,10 @@ Everything in class="screen" id="main"
 /*NOTE this is also used in class="screen" id="res" section. Used for all titles.*/
 
 .title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 6em;
-    font-weight: 900;
-    letter-spacing: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 6em;
+	font-weight: 900;
+	letter-spacing: 5px;
 }
 
 .centered {
@@ -74,28 +74,28 @@ Everything in class="screen" id="main"
 
 .homepage .t3 {
 	height: 10vh;
-    padding-top: 0px;
-    margin-left: 15.5vw;
-    margin-bottom: 0vh;
-    /*display: inline-block;*/
-    /*-webkit-transition: all 1s;*/
-    /*-moz-transition: all 1s;*/
-    /*-o-transition: all 1s;*/
-    /*transition: all 1s;*/
+	padding-top: 0px;
+	margin-left: 15.5vw;
+	margin-bottom: 0vh;
+	/*display: inline-block;*/
+	/*-webkit-transition: all 1s;*/
+	/*-moz-transition: all 1s;*/
+	/*-o-transition: all 1s;*/
+	/*transition: all 1s;*/
 }
 
 .homepage .t4 {
-    -webkit-transition: all 1s;
+	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
-    transition: all 1s;
+	transition: all 1s;
 }
 
 .claire {
-    -webkit-transition: all 1s;
+	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
-    transition: all 1s;
+	transition: all 1s;
 }
 
 .hiddenn {
@@ -103,10 +103,10 @@ Everything in class="screen" id="main"
 	color: white;
 	font-size: 1.5em;
 	font-weight: lighter;
-    -webkit-transition: 0.3ms;
+	-webkit-transition: 0.3ms;
 	-moz-transition: 0.3ms;
 	-o-transition: 0.3s;
-    transition: 0.3s;
+	transition: 0.3s;
 }
 
 /*.disable {
@@ -122,8 +122,8 @@ Everything in class="screen" id="main"
 	-o-transition: 500ms;
 	transition: 500ms;
 	position: absolute;
-    top: 50%;
-    color: white;
+	top: 50%;
+	color: white;
 }
 
 #resume {
@@ -140,7 +140,6 @@ Everything in class="screen" id="main"
 	transition: 500ms;
 }
 
-
 #blog {
 	font-size: 120%;
 	text-align: center;
@@ -156,18 +155,18 @@ Everything in class="screen" id="main"
 }
 
 #aboutme_container {
-    margin-top: 13%;
-    width: 11vw;
-    height: 5vw;
-    margin-left: 44.5%;
+	margin-top: 13%;
+	width: 11vw;
+	height: 5vw;
+	margin-left: 44.5%;
 }
 
 #aboutme {
 	font-size: 120%;
-    text-align: center;
-    top: 88%;
-    width: 13vw;
-    left: 43.4%;
+	text-align: center;
+	top: 88%;
+	width: 13vw;
+	left: 43.4%;
 }
 
 #arrow {
@@ -221,24 +220,24 @@ Everything in class="screen" id="main"
 }
 
 .amworddescrip {
-    margin-left: 12%;
-    margin-right: 12%;
-    text-align: center !important;
-    font-size: 150% !important;
+	margin-left: 12%;
+	margin-right: 12%;
+	text-align: center !important;
+	font-size: 150% !important;
 }
 
 .name-svg {
 	height: 100%;
-    width: 85%;
-    margin: auto;
-    display: block;
+	width: 85%;
+	margin: auto;
+	display: block;
 }
 
 .name-svg {
-  stroke-dasharray: 7% 28%;
-  stroke-width: 3px;
-  -webkit-animation: stroke-offset 5s 1 linear;
-          animation: stroke-offset 5s 1 linear;
+	stroke-dasharray: 7% 28%;
+	stroke-width: 3px;
+	-webkit-animation: stroke-offset 5s 1 linear;
+	animation: stroke-offset 5s 1 linear;
 }
 
 /*add this class with jquery and remove after 5s*/
@@ -273,14 +272,15 @@ Everything in class="screen" id="main"
 }*/
 
 @keyframes stroke-offset {
-  /*50% {
+
+	/*50% {
     stroke-dashoffset: 35%;
     stroke-dasharray: 0 87.5%;
   }*/
-  100% {
-  	stroke-dashoffset: 0%;
-  	stroke-dasharray: 100% 0;
-  }
+	100% {
+		stroke-dashoffset: 0%;
+		stroke-dasharray: 100% 0;
+	}
 }
 
 /*
@@ -289,12 +289,12 @@ Everything in class="screen" id="res"
 */
 
 .res {
-	background-color:rgba(255, 255, 255, 0);
+	background-color: rgba(255, 255, 255, 0);
 	width: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-  	min-height: 100%;
+	min-height: 100%;
 	-webkit-transform: translateX(-100%);
 	-moz-transform: translateX(-100%);
 	-o-transform: translateX(-100%);
@@ -327,14 +327,14 @@ Everything in class="screen" id="res"
 
 
 .home {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 120%;
-    -webkit-transition: all 1s;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 120%;
+	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
-    transition: all 1s;
-    height: 6vh;
-    margin-left: 1%;
+	transition: all 1s;
+	height: 6vh;
+	margin-left: 1%;
 }
 
 .home:hover {
@@ -346,14 +346,14 @@ Everything in class="screen" id="res"
 }
 
 .resmenu {
-    position: fixed;
-    left: 89%;
-    width: 100%;
-    top: 35%;
-    z-index: -5;
-    transition: 750ms;
-    opacity: 0;
-    color: black;
+	position: fixed;
+	left: 89%;
+	width: 100%;
+	top: 35%;
+	z-index: -5;
+	transition: 750ms;
+	opacity: 0;
+	color: black;
 }
 
 .menu-visible {
@@ -370,29 +370,29 @@ Everything in class="screen" id="res"
 }
 
 .totop {
-    width: 5vw;
-    height: 10vh;
-    margin-left: 1.35%;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 3vh;
-    -webkit-transition: all 2s;
+	width: 5vw;
+	height: 10vh;
+	margin-left: 1.35%;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 3vh;
+	-webkit-transition: all 2s;
 	-moz-transition: all 2s;
 	-o-transition: all 2s;
-    transition: all 2s;
+	transition: all 2s;
 }
 
 .toparrow {
 	font-size: 120%;
-    text-align: center;
-    top: 88%;
-    width: 4vw;
+	text-align: center;
+	top: 88%;
+	width: 4vw;
 }
 
 .topword {
 	font-size: 120%;
-    text-align: center;
-    width: 6vw;
-    padding-right: 2vw;
+	text-align: center;
+	width: 6vw;
+	padding-right: 2vw;
 }
 
 .totop:hover .topword {
@@ -414,20 +414,20 @@ Everything in class="screen" id="res"
 
 .section {
 	padding-top: 40px;
-    padding-right: 15%;
-    padding-bottom: 40px;
-    padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 40px;
+	padding-left: 15%;
 }
 
 /*Header Section*/
 
 #header_container {
 	padding-top: 15%;
-    text-align: center;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    min-height: 100vh;
+	text-align: center;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	min-height: 100vh;
 }
 
 #resheader {
@@ -438,12 +438,12 @@ Everything in class="screen" id="res"
 
 #resheader:after {
 	content: "";
-    background: black;
-    position: absolute;
-    bottom: 0;
-    width: 60%;
-    height: 1px;
-    left: 20%;
+	background: black;
+	position: absolute;
+	bottom: 0;
+	width: 60%;
+	height: 1px;
+	left: 20%;
 }
 
 .ressubtitle {
@@ -456,17 +456,17 @@ Everything in class="screen" id="res"
 hr {
 	margin-top: 5%;
 	margin-bottom: 5%;
-    border-color: #727878;
-    opacity: 0.2;
-    border-width: 0.5px;
-    border-style: solid;
+	border-color: #727878;
+	opacity: 0.2;
+	border-width: 0.5px;
+	border-style: solid;
 }
 
 .head {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-    font-weight: lighter;
-    font-size: large;
+	font-weight: lighter;
+	font-size: large;
 }
 
 .col {
@@ -490,10 +490,10 @@ hr {
 
 .sec_title {
 	font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    font-weight: 100;
-    text-align: center;
-    width: 100%;
+	font-size: 3em;
+	font-weight: 100;
+	text-align: center;
+	width: 100%;
 	position: relative;
 	color: teal;
 }
@@ -501,8 +501,8 @@ hr {
 .sec_subtitle {
 	font-family: 'Montserrat', sans-serif;
 	text-align: left;
-    font-size: x-large;
-    color: teal;
+	font-size: x-large;
+	color: teal;
 }
 
 /*Everything in class="section" id="profile"*/
@@ -526,8 +526,8 @@ hr {
 
 #edudescrip {
 	text-align: left;
-    padding-left: 25%;
-    margin-top: 10px;
+	padding-left: 25%;
+	margin-top: 10px;
 }
 
 .under {
@@ -598,9 +598,9 @@ hr {
 
 #half {
 	width: 45.7%;
-    margin: 2%;
-    display: inline-block;
-    vertical-align: top;
+	margin: 2%;
+	display: inline-block;
+	vertical-align: top;
 }
 
 /*Everything in class="section" id="skills"*/
@@ -611,18 +611,14 @@ hr {
 
 #hack {
 	width: 45.7%;
-    margin: 2%;
-}
-
-ul {
-	list-style-type: none;
+	margin: 2%;
 }
 
 .skill {
 	font-family: 'Raleway', sans-serif;
-    margin-bottom: 2%;
-    vertical-align: top;
-    height: 3.5vh;
+	margin-bottom: 2%;
+	vertical-align: top;
+	height: 3.5vh;
 }
 
 #tag {
@@ -661,22 +657,22 @@ ul {
 
 #hidden {
 	opacity: 0;
-    padding-top: 1.4%;
-    float: right;
-    color: teal;
-    margin-right: 3%;
-    -webkit-transition: 0.3ms;
+	padding-top: 1.4%;
+	float: right;
+	color: teal;
+	margin-right: 3%;
+	-webkit-transition: 0.3ms;
 	-moz-transition: 0.3ms;
 	-o-transition: 0.3s;
-    transition: 0.3s;
+	transition: 0.3s;
 }
 
 .skill:hover #hidden {
 	opacity: 1;
-    -webkit-transition: 0.3ms;
+	-webkit-transition: 0.3ms;
 	-moz-transition: 0.3ms;
 	-o-transition: 0.3s;
-    transition: 0.3s;
+	transition: 0.3s;
 }
 
 /*Everything in class="screen" id="project"*/
@@ -728,14 +724,14 @@ ul {
 
 .download-button {
 	font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    border: 2px solid white;
-    height: 100%;
-    width: 20%;
-    padding: 1%;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
+	text-align: center;
+	border: 2px solid white;
+	height: 100%;
+	width: 20%;
+	padding: 1%;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .download-button a:link {
@@ -752,13 +748,13 @@ ul {
 Everything in class="screen medium"*/
 
 .blog {
-	background-color:rgba(255, 255, 255, 0);
+	background-color: rgba(255, 255, 255, 0);
 	width: 100%;
 	position: absolute;
 	top: 0;
 	right: 0;
-  	min-height: 100%;
-  	font-family: 'Montserrat', sans-serif;
+	min-height: 100%;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-transform: translateX(100%);
 	-moz-transform: translateX(100%);
 	-o-transform: translateX(100%);
@@ -784,18 +780,18 @@ Everything in class="screen medium"*/
 #bloghome {
 	margin-left: -0.4%;
 	width: 7.5vw;
-    height: 6vh;
+	height: 6vh;
 }
 
 .blogmenu {
-    position: fixed;
-    left: 2%;
-    width: 100%;
-    top: 35%;
-    z-index: 1;
-    transition: 1.5s;
-    color: black;
-    display: none;
+	position: fixed;
+	left: 2%;
+	width: 100%;
+	top: 35%;
+	z-index: 1;
+	transition: 1.5s;
+	color: black;
+	display: none;
 }
 
 .blogmenu-active-display {
@@ -803,29 +799,29 @@ Everything in class="screen medium"*/
 }
 
 .totop {
-    width: 5vw;
-    height: 10vh;
-    margin-left: 1.35%;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 3vh;
-    -webkit-transition: all 2s;
+	width: 5vw;
+	height: 10vh;
+	margin-left: 1.35%;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 3vh;
+	-webkit-transition: all 2s;
 	-moz-transition: all 2s;
 	-o-transition: all 2s;
-    transition: all 2s;
+	transition: all 2s;
 }
 
 .toparrow {
 	font-size: 120%;
-    text-align: center;
-    top: 88%;
-    width: 4vw;
+	text-align: center;
+	top: 88%;
+	width: 4vw;
 }
 
 .topword {
 	font-size: 120%;
-    text-align: center;
-    width: 6vw;
-    padding-right: 2vw;
+	text-align: center;
+	width: 6vw;
+	padding-right: 2vw;
 }
 
 .totop:hover .topword {
@@ -845,14 +841,14 @@ Everything in class="screen medium"*/
 }
 
 .home {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 120%;
-    -webkit-transition: all 1s;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 120%;
+	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
-    transition: all 1s;
-    height: 6vh;
-    margin-left: 1%;
+	transition: all 1s;
+	height: 6vh;
+	margin-left: 1%;
 }
 
 .home:hover {
@@ -877,11 +873,11 @@ Everything in class="screen medium"*/
 	margin-top: 2%;
 	margin-bottom: 2%;
 	font-size: 1em;
-    font-weight: 900;
-    padding-right: 5vw;
-    padding-left: 5vw;
+	font-weight: 900;
+	padding-right: 5vw;
+	padding-left: 5vw;
 }
 
 #paragraph {
-	font-size: 48px
+	font-size: 48px;
 }
