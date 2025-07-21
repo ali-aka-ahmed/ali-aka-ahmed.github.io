@@ -9,3 +9,9 @@
 #paragraph {
 	font-size: 48px;
 }
+
+.subpage-paragraph {
+	padding-bottom: 30px;
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.7);
+}
