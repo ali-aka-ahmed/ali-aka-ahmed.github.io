@@ -27,10 +27,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "api/add-to-loops.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
