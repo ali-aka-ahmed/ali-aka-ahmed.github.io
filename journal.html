@@ -25,6 +25,59 @@
     body {
       background-color: #f7f6f3;
     }
+
+    /* Mobile responsive styles */
+    @media (max-width: 768px) {
+      .h-container {
+        display: block !important;
+        gap: 0 !important;
+      }
+      
+      #musicBoxDesktop {
+        display: none !important;
+      }
+      
+      #moroccoPhotos {
+        display: none !important;
+      }
+      
+      #musicInline {
+        display: inline !important;
+      }
+      
+      .h-half {
+        flex: none !important;
+      }
+      
+      #paragraph {
+        font-size: 32px;
+      }
+      
+      .paragraph {
+        font-size: 13px;
+      }
+      
+      .subpage-paragraph {
+        font-size: 14px;
+      }
+
+      /* Mobile email form styles */
+      div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: stretch !important;
+      }
+      
+      input[type="email"] {
+        max-width: none !important;
+        flex: none !important;
+      }
+
+      /* Fix image container width on mobile */
+      div[style*="width: 600px"] {
+        width: auto !important;
+      }
+    }
   </style>
 </head>
 
@@ -39,38 +92,21 @@
           Your browser can't play music :/
         </audio>
         <h1 class="cc-name title" data-ix="flip-click">journal</h1>
-        <p id="paragraph" style="margin-bottom: 30px;"><br />✍️<br /></p><br />
+        <p id="paragraph"><br />✍️ <span id="musicInline" style="display: none;"></span><br /></p><br />
 
-        <p class="subpage-paragraph">
-          hello world :)
-        </p>
-        <p class="subpage-paragraph">
-          or specifically sf.
-        </p>
-        <p class="subpage-paragraph">
+        <p class="paragraph" style="padding-bottom: 10px;"><br />hello world :)<br /><br />
+          or specifically sf.<br /><br />
           i wanted to ship something as i returned. something beautiful.<br />
-          something that i wish i had as a founder in my past life.<br />
-        </p>
-        <p class="subpage-paragraph">
-          so i built this journaling app for myself.
-        </p>
-        <p class="subpage-paragraph" style="position: relative;">
-          this great city is filled with people building the future. <br />
-          that's a lot of weight to carry.<br />
-        </p>
-        <p class="subpage-paragraph">
+          something that i wish i had as a founder in my past life.<br /><br />
+          so i built this journaling app for myself.<br /><br />
+          this great city is filled with people building the future.<br />
+          that's a lot of weight to carry.<br /><br />
           two years ago, i left sf.<br />
           having carried that weight and getting (nearly) crushed by it.<br />
-          and journaling helped me get back up.<br />
-        </p>
-        <p class="subpage-paragraph">
+          and journaling helped me get back up.<br /><br />
           so this quick product is a love letter to those carrying that weight.<br />
-          and those that will carry it.<br />
-        </p>
-        <p class="subpage-paragraph">
-          i hope this makes the weight feel lighter :) enjoy.<br />
-        </p>
-        <p class="subpage-paragraph">
+          and those that will carry it.<br /><br />
+          i hope this makes the weight feel lighter :) enjoy.<br /><br />
           - ali
         </p>
 
@@ -90,10 +126,11 @@
           <img src="./assets/img/unimaginable-future.jpeg" alt="Unimaginable Future"
             style="max-width: 100%; height: auto">
         </div>
+        
       </div>
 
       <!-- Right side music player -->
-      <div style="margin-top: 100px; position: relative;">
+      <div id="musicBoxDesktop" style="margin-top: 100px; position: relative;">
         <!-- Click here image -->
         <img id="clickHereImage" src="./assets/img/click-here.png"
           style="position: absolute; right: 100%; top: 0%; transform: translateY(-55%); margin-right: 10px; display: none; z-index: 1001; max-height: 90px;">
@@ -119,8 +156,8 @@
           </div>
         </div>
 
-        <!-- Morocco journal images -->
-        <div style="margin-top: 40px;">
+        <!-- Morocco journal images for desktop only -->
+        <div id="moroccoPhotos" style="margin-top: 40px;">
           <img src="./assets/img/morocco-journal.jpeg" alt="Morocco Journal"
             style="width: 22em; height: 100%; display: block; margin-bottom: 10px;">
           <div style="font-size: 11px; color: #666; margin-top: 5px; line-height: 1.2; margin-bottom: 10px;">
@@ -143,6 +180,58 @@
       const playIcon = document.getElementById('playIcon');
       const pauseIcon = document.getElementById('pauseIcon');
       const clickHereImage = document.getElementById('clickHereImage');
+      const musicInline = document.getElementById('musicInline');
+
+      // Check if mobile view and setup inline music player
+      function setupMobileMusic() {
+        if (window.innerWidth <= 768) {
+          // Create inline music player for mobile
+          musicInline.innerHTML = `
+            <span style="border: 1px solid #ccc; border-radius: 5px; padding: 8px 12px; display: inline-flex; align-items: center; gap: 10px; font-size: 14px; background: white;">
+              <button id="mobilePlayBtn" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; flex-shrink: 0;">
+                <svg id="mobilePlayIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="5,3 19,12 5,21" fill="currentColor" />
+                </svg>
+                <svg id="mobilePauseIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                  <rect x="6" y="4" width="4" height="16" fill="currentColor" />
+                  <rect x="14" y="4" width="4" height="16" fill="currentColor" />
+                </svg>
+              </button>
+              <span style="font-weight: 600; font-size: 14px;">Happy Man - Jungle</span>
+            </span>
+          `;
+          
+          // Add mobile play button event listener
+          const mobilePlayBtn = document.getElementById('mobilePlayBtn');
+          const mobilePlayIcon = document.getElementById('mobilePlayIcon');
+          const mobilePauseIcon = document.getElementById('mobilePauseIcon');
+          
+          mobilePlayBtn.addEventListener('click', function () {
+            if (audio.paused) {
+              audio.currentTime = 4;
+              audio.play().then(function () {
+                mobilePlayIcon.style.display = 'none';
+                mobilePauseIcon.style.display = 'block';
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+              });
+            } else {
+              audio.pause();
+              mobilePlayIcon.style.display = 'block';
+              mobilePauseIcon.style.display = 'none';
+              playIcon.style.display = 'block';
+              pauseIcon.style.display = 'none';
+            }
+          });
+        } else {
+          // Clear mobile music player on desktop
+          musicInline.innerHTML = '';
+        }
+      }
+
+      // Setup mobile music on load and resize
+      setupMobileMusic();
+      window.addEventListener('resize', setupMobileMusic);
 
       // Start with play icon showing
       playIcon.style.display = 'block';
@@ -160,11 +249,25 @@
           audio.play().then(function () {
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';
+            // Sync mobile buttons if they exist
+            const mobilePlayIcon = document.getElementById('mobilePlayIcon');
+            const mobilePauseIcon = document.getElementById('mobilePauseIcon');
+            if (mobilePlayIcon && mobilePauseIcon) {
+              mobilePlayIcon.style.display = 'none';
+              mobilePauseIcon.style.display = 'block';
+            }
           });
         } else {
           audio.pause();
           playIcon.style.display = 'block';
           pauseIcon.style.display = 'none';
+          // Sync mobile buttons if they exist
+          const mobilePlayIcon = document.getElementById('mobilePlayIcon');
+          const mobilePauseIcon = document.getElementById('mobilePauseIcon');
+          if (mobilePlayIcon && mobilePauseIcon) {
+            mobilePlayIcon.style.display = 'block';
+            mobilePauseIcon.style.display = 'none';
+          }
         }
       });
 
