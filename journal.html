@@ -26,37 +26,42 @@
       background-color: #f7f6f3;
     }
 
+    /* Desktop styles - ensure paragraphs don't have max-width */
+    .paragraph {
+      max-width: none;
+    }
+
     /* Mobile responsive styles */
     @media (max-width: 768px) {
       .h-container {
         display: block !important;
         gap: 0 !important;
       }
-      
+
       #musicBoxDesktop {
         display: none !important;
       }
-      
+
       #moroccoPhotos {
         display: none !important;
       }
-      
+
       #musicInline {
         display: inline !important;
       }
-      
+
       .h-half {
         flex: none !important;
       }
-      
+
       #paragraph {
         font-size: 32px;
       }
-      
+
       .paragraph {
         font-size: 13px;
       }
-      
+
       .subpage-paragraph {
         font-size: 14px;
       }
@@ -67,7 +72,7 @@
         gap: 15px !important;
         align-items: stretch !important;
       }
-      
+
       input[type="email"] {
         max-width: none !important;
         flex: none !important;
@@ -76,6 +81,18 @@
       /* Fix image container width on mobile */
       div[style*="width: 600px"] {
         width: auto !important;
+      }
+
+      /* Mobile line breaks */
+      .mobile-break {
+        display: inline;
+      }
+    }
+
+    /* Desktop - hide mobile line breaks */
+    @media (min-width: 769px) {
+      .mobile-break {
+        display: none;
       }
     }
   </style>
@@ -96,15 +113,16 @@
 
         <p class="paragraph" style="padding-bottom: 10px;"><br />hello world :)<br /><br />
           or specifically sf.<br /><br />
-          i wanted to ship something as i returned. something beautiful.<br />
+          i wanted to ship something as i returned. something beautiful.<br /><span class="mobile-break"><br /></span>
           something that i wish i had as a founder in my past life.<br /><br />
           so i built this journaling app for myself.<br /><br />
-          this great city is filled with people building the future.<br />
+          this great city is filled with people building the future.<br /><span class="mobile-break"><br /></span>
           that's a lot of weight to carry.<br /><br />
-          two years ago, i left sf.<br />
-          having carried that weight and getting (nearly) crushed by it.<br />
-          and journaling helped me get back up.<br /><br />
-          so this quick product is a love letter to those carrying that weight.<br />
+          two years ago, i left sf.<br /><span class="mobile-break"><br /></span>
+          having carried that weight and getting (nearly) crushed by it.<br /><span class="mobile-break"><br /></span>
+          journaling helped me get back up.<br /><br />
+          so this quick product is a love letter to those carrying that weight.<br /><span
+            class="mobile-break"><br /></span>
           and those that will carry it.<br /><br />
           i hope this makes the weight feel lighter :) enjoy.<br /><br />
           - ali
@@ -126,7 +144,7 @@
           <img src="./assets/img/unimaginable-future.jpeg" alt="Unimaginable Future"
             style="max-width: 100%; height: auto">
         </div>
-        
+
       </div>
 
       <!-- Right side music player -->
@@ -200,12 +218,12 @@
               <span style="font-weight: 600; font-size: 14px;">Happy Man - Jungle</span>
             </span>
           `;
-          
+
           // Add mobile play button event listener
           const mobilePlayBtn = document.getElementById('mobilePlayBtn');
           const mobilePlayIcon = document.getElementById('mobilePlayIcon');
           const mobilePauseIcon = document.getElementById('mobilePauseIcon');
-          
+
           mobilePlayBtn.addEventListener('click', function () {
             if (audio.paused) {
               audio.currentTime = 4;
