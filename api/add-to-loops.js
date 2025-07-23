@@ -20,7 +20,7 @@ export default async function handler(req, res) {
 
   try {
     // Add contact to Loops
-    const response = await fetch('https://app.loops.so/api/v1/contacts/create', {
+    const response = await fetch('https://app.loops.so/api/v1/contacts/update', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
