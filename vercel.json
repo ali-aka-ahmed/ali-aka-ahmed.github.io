@@ -5,6 +5,10 @@
       "destination": "/journal.html"
     },
     {
+      "source": "/updates",
+      "destination": "/updates.html"
+    },
+    {
       "source": "/resume",
       "destination": "/resume.html"
     }
