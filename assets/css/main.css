@@ -15,3 +15,9 @@
 	font-size: 15px;
 	color: rgba(0, 0, 0, 0.7);
 }
+
+/* Override Webflow hover effects that cause movement */
+.link-box:hover {
+	direction: ltr !important;
+	text-decoration: underline !important;
+}
