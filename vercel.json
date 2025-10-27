@@ -11,6 +11,10 @@
     {
       "source": "/resume",
       "destination": "/resume.html"
+    },
+    {
+      "source": "/risky-decisions",
+      "destination": "/risky-decisions.html"
     }
   ],
   "headers": [
