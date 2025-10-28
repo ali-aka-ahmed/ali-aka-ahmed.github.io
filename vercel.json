@@ -15,6 +15,10 @@
     {
       "source": "/risky-decisions",
       "destination": "/risky-decisions.html"
+    },
+    {
+      "source": "/how-to-learn-pt1",
+      "destination": "/how-to-learn-pt1.html"
     }
   ],
   "headers": [
