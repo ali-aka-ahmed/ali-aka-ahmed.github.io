@@ -9,6 +9,10 @@
       "destination": "/updates.html"
     },
     {
+      "source": "/disney",
+      "destination": "/disney.html"
+    },
+    {
       "source": "/resume",
       "destination": "/resume.html"
     },
