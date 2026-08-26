@@ -1,9 +1,259 @@
+/* ==========================================================================
+   aliahmed.ai
+
+   Everything this site needs, first-party. This replaces the old Webflow
+   CDN stylesheet, which shipped 506 rules for a site that used 61 of them.
+   Webflow's generated class names (_1, cc-name, w-inline-block,
+   w-list-unstyled, body) have been folded into the real ones.
+   ========================================================================== */
+
+/* --- Reset ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	cursor: default;
+}
+
+h1 {
+	margin: 20px 0 10px;
+	font-size: 38px;
+	line-height: 44px;
+	font-weight: 400;
+}
+
+p {
+	margin: 0 0 10px;
+}
+
+ul {
+	margin: 0 0 10px;
+	padding-left: 40px;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+audio {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+button,
+input {
+	margin: 0;
+	color: inherit;
+	font: inherit;
+}
+
+button {
+	overflow: visible;
+	border: 0;
+	text-transform: none;
+	appearance: button;
+	cursor: pointer;
+}
+
+input {
+	line-height: normal;
+}
+
+/* --- Layout --------------------------------------------------------------- */
+
+.section {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 10vw;
+	overflow: hidden;
+	color: #000;
+	font-family: "Roboto Mono", sans-serif;
+	font-weight: 400;
+}
+
+.h-container {
+	position: relative;
+	display: flex;
+	flex: 1 1 0%;
+	align-self: stretch;
+}
+
+.h-half {
+	position: relative;
+	z-index: 0;
+	width: 50%;
+}
+
+/* --- Type ----------------------------------------------------------------- */
+
+.title {
+	position: relative;
+	z-index: 98;
+	display: inline-block;
+	max-width: 500px;
+	margin: 0 0 30px -5px;
+	padding-bottom: 6px;
+	color: #000;
+	font-size: 48px;
+	line-height: 120%;
+	font-weight: 400;
+	cursor: default;
+}
+
+.paragraph {
+	position: relative;
+	z-index: 98;
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	margin-bottom: 0;
+	color: rgba(0, 0, 0, 0.7);
+}
+
 #paragraph {
 	font-size: 48px;
 }
 
-/* Override Webflow hover effects that cause movement */
+/* --- Link list ------------------------------------------------------------ */
+
+.h-ul {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	flex: 1 1 0%;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	width: 90%;
+	max-width: 500px;
+	margin: 30px 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.h-li {
+	display: block;
+	flex: 0 0 33.33%;
+}
+
+.link-box {
+	display: block;
+	flex: 1 1 0%;
+	max-width: 100%;
+	padding: 25px 0;
+	color: #0033ff;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
 .link-box:hover {
-	direction: ltr !important;
-	text-decoration: underline !important;
+	text-decoration: underline;
+}
+
+.h-link-text {
+	flex: 0 0 auto;
+	align-self: center;
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+
+@media (max-width: 991px) {
+	.section {
+		height: auto;
+		min-height: 0vh;
+	}
+
+	.h-container {
+		flex-direction: column;
+	}
+
+	.h-half {
+		width: 100%;
+	}
+
+	.title {
+		font-size: 44px;
+	}
+
+	.h-ul {
+		width: 80%;
+	}
+}
+
+@media (max-width: 767px) {
+	.title {
+		font-size: 36px;
+	}
+
+	.paragraph {
+		width: 100%;
+	}
+}
+
+@media (max-width: 479px) {
+	.title {
+		display: block;
+		margin-left: -3px;
+	}
+
+	.paragraph {
+		font-size: 13px;
+		line-height: 23px;
+	}
+
+	.link-box {
+		padding: 15px 0;
+	}
+
+	.h-li {
+		flex-basis: 50%;
+	}
+
+	.h-link-text {
+		font-size: 10px;
+	}
 }
