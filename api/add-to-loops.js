@@ -35,7 +35,6 @@ export default async function handler(req, res) {
     });
 
     if (response.ok) {
-      const data = await response.json();
       console.log('Successfully added email to Loops:', email);
       return res.status(200).json({ success: true, message: 'Email added successfully' });
     } else {
